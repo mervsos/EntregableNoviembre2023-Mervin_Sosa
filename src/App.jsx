@@ -26,7 +26,7 @@ function App() {
     setErrorMesage('');
     setIngresoDato({
       titulo: libroTitulo,
-      descripcion: libroDescripcion
+      descripcion: libroDescripcion,
     });
   };
 
@@ -51,7 +51,7 @@ function App() {
       
       </form>
       {errorMesage && <p style={{ color: 'red' }}>{errorMesage}</p>}
-      {ingresoDato && <Card data={ingresoDato} />}
+      {ingresoDato && !errorMesage && <Card data={ingresoDato} />}
     </div>
   );
 }
