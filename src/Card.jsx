@@ -5,8 +5,8 @@ function Card() {
   return (
     <div>
       <h2>Información Ingresada:</h2>
-      <p><strong>Título:</strong> {data.title}</p>
-      <p><strong>Descripción:</strong> {data.description}</p>
+      <p><strong>Título:</strong> {data.titulo}</p>
+      <p><strong>Descripción:</strong> {data.descripcion}</p>
     </div>
   );
 }

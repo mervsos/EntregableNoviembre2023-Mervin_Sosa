@@ -8,30 +8,32 @@ function App() {
   const [errorMesage, setErrorMesage] = useState('');
   const [ingresoDato, setIngresoDato] = useState(null);
 
-  const ingresoha = (e) => {
+  const manejador = (e) => {
     e.preventDefault();
 
     if (libroTitulo.length < 3 || libroTitulo.startsWith(' ')) {
       setErrorMesage('Por favor chequea que la información sea correcta');
+      setIngresoDato(null);
       return;
     }
 
     if (libroDescripcion.length < 6) {
       setErrorMesage('Por favor chequea que la información sea correcta');
+      setIngresoDato(null);
       return;
     }
 
     setErrorMesage('');
     setIngresoDato({
-      title: libroTitulo,
-      description: libroDescripcion
+      titulo: libroTitulo,
+      descripcion: libroDescripcion
     });
   };
 
   return (
     <div className="App">
       <h1>Información del Libro</h1>
-      <form> Ingresar={ingresoDato}
+      <form> Ingresar={manejador}
         <input
           type="text"
           placeholder="Título del libro"
